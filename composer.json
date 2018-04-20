@@ -1,0 +1,21 @@
+{
+    "name": "wsmwason/gamer-to-rss",
+    "description": "巴哈姆特小屋轉換 RSS",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "wsmwason",
+            "email": "wsmwason@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "imangazaliev/didom": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "wsmwason\\": "src/"
+        }
+    }
+}
