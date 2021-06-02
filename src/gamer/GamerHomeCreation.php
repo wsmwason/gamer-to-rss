@@ -182,14 +182,14 @@ class GamerHomeCreation {
 
         foreach ($this->entries as $id => $entry) {
             $item = $channel->addChild('item');
-                $item->addChild('title', $entry['title']);
+                $item->addChild('title', htmlspecialchars($entry['title']));
                 $item->addChild('link', $entry['link']);
-                $item->addChild('author', $entry['author']);
+                $item->addChild('author', htmlspecialchars($entry['author']));
                 $description = $entry['description'];
                 if (!empty($entry['image'])) {
                     $description = '<img src="' . $entry['image'] . '"><br>' . $description;
                 }
-                $item->addChild('description', $description);
+                $item->addChild('description', htmlspecialchars($description));
                 $item->addChild('pubDate', date("D, j M Y H:i:s +0800", strtotime($entry['pubDate'])));
         }
 
